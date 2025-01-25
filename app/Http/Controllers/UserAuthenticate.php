@@ -34,7 +34,7 @@ class UserAuthenticate extends Controller
         $user = User::create($input);
 
         // Generate token for the new user
-        $success['token'] = $user->createToken('MyApp')->plainTextToken;
+        // $success['token'] = $user->createToken('MyApp')->plainTextToken;
         $success['name'] = $user->name;
 
         return response()->json([
